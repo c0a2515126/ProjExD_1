@@ -21,17 +21,26 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-
+    
         key_lst = pg.key.get_pressed()#練習１０ー３
-        if key_lst[pg.K_UP]:
-            kk_rct.move_ip((0, -1))
-        if key_lst[pg.K_DOWN]:
-            kk_rct.move_ip((0, +1))
-            
-        if key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip((+2, 0))
+        move_x=-1
+        move_y=0
         
-        kk_rct.move_ip((-1, 0))#左
+        if key_lst[pg.K_UP]:
+            move_y= -1
+        elif key_lst[pg.K_DOWN]:
+            move_y= 1        
+        elif key_lst[pg.K_RIGHT]:
+            move_x= 2
+
+
+        kk_rct.move_ip((move_x, move_y)) #演習2
+
+        
+        #kk_rct.move_ip((-1, 0))#左　演習１①
+
+        #if key_lst[pg.K_RIGHT]:
+                    #kk_rct.move_ip((+2, 0))
     
                 
 
