@@ -22,7 +22,7 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
     
-        key_lst = pg.key.get_pressed()#練習１０ー３
+        key_lst = pg.key.get_pressed()#練習１０ー３,
         move_x=-1
         move_y=0
         
@@ -51,7 +51,7 @@ def main():
         screen.blit(kk_img, kk_rct) #練習４ 練習１０
         pg.display.update()
         tmr += 1       
-        clock.tick(200) #練習６
+        clock.tick(200) #練習６a
 
 
 if __name__ == "__main__":
